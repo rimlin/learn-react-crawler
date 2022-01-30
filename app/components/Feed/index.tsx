@@ -55,6 +55,9 @@ export const Feed = ({
                   type="button">
                   {isReaded ? 'Unreaded' : 'Readed'}
                 </button>
+                {site === undefined ? (
+                  <span className="info-label">{item.site.name}</span>
+                ) : null}
                 {item.date ? <span className="date">{item.date}</span> : null}
               </div>
             </li>

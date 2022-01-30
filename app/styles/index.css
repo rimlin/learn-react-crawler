@@ -86,6 +86,12 @@ main nav ul li.selected button {
   margin-top: 12px;
 }
 
+.feed .info-label {
+  margin-left: 12px;
+  background-color: hsl(45, 10%, 90%);
+  padding: 6px;
+}
+
 .feed button {
   cursor: pointer;
   background-color: hsl(35, 80%, 90%);

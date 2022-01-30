@@ -36,7 +36,10 @@ const parseSite = async (siteInfo: SiteParseInfo): Promise<SiteArticle[]> => {
       return {
         articleName: $(elem).find(siteInfo.selectors.title).text(),
         articleUrl: getArticleUrl(siteInfo, href),
-        date
+        date,
+        site: {
+          name: siteInfo.name
+        }
       };
     })
     .get();

@@ -14,6 +14,9 @@ export interface SiteArticle {
   articleName: string;
   articleUrl: string;
   date: string | undefined;
+  site: {
+    name: string;
+  };
 }
 
 export interface SiteArticles {

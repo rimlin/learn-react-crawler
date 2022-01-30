@@ -146,6 +146,39 @@
 				"title": "h2 a",
 				"datetime": "time"
 			}
+		},
+		{
+			"name": "Habr",
+			"siteUrl": "https://habr.com/",
+			"blogUrl": "https://habr.com/ru/hub/reactjs/",
+			"selectors": {
+				"article": "main article",
+				"link": "h2 a",
+				"title": "h2 a",
+				"datetime": "time"
+			}
+		},
+		{
+			"name": "Smashing Magazine",
+			"siteUrl": "https://www.smashingmagazine.com/",
+			"blogUrl": "https://www.smashingmagazine.com/category/react",
+			"selectors": {
+				"article": "main article",
+				"link": "h2 a",
+				"title": "h2 a",
+				"datetime": "time"
+			}
+		},
+		{
+			"name": "Tech with Cathal",
+			"siteUrl": "https://cathalmacdonnacha.com/",
+			"blogUrl": "https://cathalmacdonnacha.com/",
+			"selectors": {
+				"article": ".blog-content-area .blog-post-card",
+				"link": "h1 a",
+				"title": "h1 a",
+				"datetime": ".blog-post-card-time"
+			}
 		}
 	]
 }

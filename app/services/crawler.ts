@@ -1,6 +1,4 @@
 import * as cheerio from 'cheerio';
-import { join } from 'path';
-import * as fs from 'fs/promises';
 
 import { SiteArticles, SiteArticle, SiteParseInfo } from '~/types/Crawler';
 
@@ -10,7 +8,7 @@ const getArticleUrl = (siteInfo: SiteParseInfo, href: string): string => {
   if (href.startsWith('http')) {
     return href;
   } else {
-    return join(siteInfo.siteUrl, href);
+    return new URL(href, siteInfo.siteUrl).href;
   }
 };
 

@@ -1,0 +1,151 @@
+{
+	"sites": [
+		{
+			"name": "Mark's Dev Blog",
+			"siteUrl": "https://blog.isquaredsoftware.com/",
+			"blogUrl": "https://blog.isquaredsoftware.com/",
+			"selectors": {
+				"article": ".article-list article",
+				"title": "h2 a",
+				"link": "h2 a",
+				"datetime": "time"
+			}
+		},
+		{
+			"name": "Kent C. Dodds",
+			"siteUrl": "https://kentcdodds.com/",
+			"blogUrl": "https://kentcdodds.com/blog",
+			"selectors": {
+				"article": "body > div:nth-child(2) > div:nth-child(4) > div > div",
+				"link": "div > a",
+				"title": "div > a > div:nth-child(3)",
+				"datetime": "div > a > div:nth-child(2)"
+			}
+		},
+		{
+			"name": "Josh Comeau",
+			"siteUrl": "https://www.joshwcomeau.com/",
+			"blogUrl": "https://www.joshwcomeau.com/",
+			"selectors": {
+				"article": "main article",
+				"link": "a",
+				"title": "a > h3"
+			}
+		},
+		{
+			"name": "Dan Abramov",
+			"siteUrl": "https://overreacted.io/",
+			"blogUrl": "https://overreacted.io/",
+			"selectors": {
+				"article": "main article",
+				"link": "h3 a",
+				"title": "h3 a",
+				"datetime": "header > small"
+			}
+		},
+		{
+			"name": "Vladimir Klepov as a Coder",
+			"siteUrl": "https://thoughtspile.github.io/",
+			"blogUrl": "https://thoughtspile.github.io/",
+			"selectors": {
+				"article": ".post-list .post-item",
+				"link": "a",
+				"title": "a span:nth-child(2)"
+			}
+		},
+		{
+			"name": "Kyle Shevlin",
+			"siteUrl": "https://kyleshevlin.com/",
+			"blogUrl": "https://kyleshevlin.com/tags/react",
+			"selectors": {
+				"article": "main > div > div",
+				"link": "a",
+				"title": "a"
+			}
+		},
+		{
+			"name": "Theodorus Clarence",
+			"siteUrl": "https://theodorusclarence.com/",
+			"blogUrl": "https://theodorusclarence.com/blog",
+			"selectors": {
+				"article": "main ul li",
+				"link": "a",
+				"title": "h4",
+				"datetime": "a div:nth-child(2) p span"
+			}
+		},
+		{
+			"name": "Freecodecamp",
+			"siteUrl": "https://www.freecodecamp.org/",
+			"blogUrl": "https://www.freecodecamp.org/news/tag/react/",
+			"selectors": {
+				"article": ".post-feed .post-card",
+				"link": ".post-card-title a",
+				"title": ".post-card-title a",
+				"datetime": "time"
+			}
+		},
+		{
+			"name": "Plasmic Blog",
+			"siteUrl": "https://blog.plasmic.app/",
+			"blogUrl": "https://blog.plasmic.app/",
+			"selectors": {
+				"article": "ul article",
+				"link": "h2 a",
+				"title": "h2 a"
+			}
+		},
+		{
+			"name": "Ben Ilegbodu",
+			"siteUrl": "https://www.benmvp.com/",
+			"blogUrl": "https://www.benmvp.com/blog/",
+			"selectors": {
+				"article": "main > div > div",
+				"link": "div > a",
+				"title": "a h3",
+				"datetime": "a h4"
+			}
+		},
+		{
+			"name": "Bytes Dev",
+			"siteUrl": "https://bytes.dev/",
+			"blogUrl": "https://bytes.dev/archives",
+			"selectors": {
+				"article": "div:contains(\"Past Issues\") > ul > li",
+				"link": "a",
+				"title": "a"
+			}
+		},
+		{
+			"name": "Open Replay",
+			"siteUrl": "https://blog.openreplay.com/",
+			"blogUrl": "https://blog.openreplay.com/",
+			"selectors": {
+				"article": "a:has(h2)",
+				"title": "h2",
+				"datetime": "div > div:last-child > div"
+			}
+		},
+		{
+			"name": "Hackernoon",
+			"siteUrl": "https://hackernoon.com/",
+			"blogUrl": "https://hackernoon.com/tagged/react",
+			"selectors": {
+				"article": "main article",
+				"link": "h2 a",
+				"title": "h2 a"
+			}
+		},
+		{
+			"name": "CSS Tricks",
+			"siteUrl": "https://css-tricks.com/",
+			"blogUrl": "https://css-tricks.com/tag/react/",
+			"selectors": {
+				"article": "main article",
+				"link": "h2 a",
+				"title": "h2 a",
+				"datetime": "time"
+			}
+		}
+	]
+}

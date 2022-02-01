@@ -1,4 +1,4 @@
-export interface SiteParseInfo {
+export interface SiteMeta {
   name: string;
   siteUrl: string;
   blogUrl: string;
@@ -10,7 +10,7 @@ export interface SiteParseInfo {
   };
 }
 
-export interface SiteArticle {
+export interface ParsedArticle {
   articleName: string;
   articleUrl: string;
   date: string | undefined;
@@ -19,8 +19,14 @@ export interface SiteArticle {
   };
 }
 
-export interface SiteArticles {
+export interface ParsedSite {
+  articles: ParsedArticle[];
+  success: boolean;
+  error?: any;
+}
+
+export interface SiteInfo {
   name: string;
   blogUrl: string;
-  articles: SiteArticle[];
+  data: ParsedSite;
 }

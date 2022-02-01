@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import stylesUrl from '~/styles/index.css';
 import { parseSites } from '~/services/crawler';
-import { SiteArticle, SiteArticles } from '~/types/Crawler';
+import { ParsedArticle, SiteInfo } from '~/types/Crawler';
 import { Feed } from '~/components/Feed';
 import {
   getInitialReadStatus,
@@ -23,23 +23,23 @@ export const loader: LoaderFunction = async () => {
 
 export default function Index() {
   const [readStatus, setReadStatus] = useState<ReadStatus>({});
-  const [selectedSite, setSelectedSite] = useState<SiteArticles | undefined>(
+  const [selectedSite, setSelectedSite] = useState<SiteInfo | undefined>(
     undefined
   );
-  const data = useLoaderData<SiteArticles[]>();
+  const data = useLoaderData<SiteInfo[]>();
 
   useEffect(() => {
     setReadStatus(getInitialReadStatus());
   }, []);
 
-  const feedData = useMemo(() => {
+  const feedData: ParsedArticle[] = useMemo(() => {
     if (selectedSite) {
-      return data.find(item => item === selectedSite)?.articles || [];
+      return data.find(item => item === selectedSite)?.data.articles || [];
     } else {
-      const unreadArticles: SiteArticle[] = [];
+      const unreadArticles: ParsedArticle[] = [];
 
       for (const site of data) {
-        for (const article of site.articles) {
+        for (const article of site.data.articles) {
           if (readStatus[article.articleUrl] !== true) {
             unreadArticles.push(article);
           }
@@ -62,6 +62,10 @@ export default function Index() {
 
     setReadStatus(prevState => ({ ...prevState, ...newState }));
   }, [feedData]);
+
+  const parsingErrors: SiteInfo[] = useMemo(() => {
+    return data.filter(siteInfo => !siteInfo.data.success);
+  }, [data]);
 
   return (
     <main>
@@ -90,6 +94,17 @@ export default function Index() {
       </nav>
 
       <section>
+        {parsingErrors.length > 0 && !selectedSite ? (
+          <div className="parsing-errors">
+            <h3>The problem with parsing the following sites:</h3>
+            <ul>
+              {parsingErrors.map(siteInfo => (
+                <li>{siteInfo.blogUrl}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
         <Feed
           site={selectedSite}
           data={feedData}

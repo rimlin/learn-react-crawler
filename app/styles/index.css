@@ -46,6 +46,12 @@ main nav ul li.selected button {
   background-color: hsl(50, 100%, 70%);
 }
 
+.parsing-errors {
+  background: hsl(0, 100%, 93%);
+  padding: 12px;
+  margin-top: 24px;
+}
+
 .feed {
   padding: 24px 24px 24px 0;
 }
@@ -70,6 +76,27 @@ main nav ul li.selected button {
 
 .feed .panel button {
   margin-left: auto;
+}
+
+.site-status {
+  margin-left: 12px;
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.site-status.success {
+  background-color: hsl(140, 100%, 46%);
+}
+
+.site-status.error {
+  background-color: hsl(0, 100%, 60%);
+}
+
+.site-status-error {
+  margin: 0 12px;
+  font-size: 0.875rem;
+  width: 70%;
 }
 
 .feed ul {

@@ -179,6 +179,17 @@
 				"title": "h1 a",
 				"datetime": ".blog-post-card-time"
 			}
+		},
+		{
+			"name": "Nadia Makarevich",
+			"siteUrl": "https://www.developerway.com/",
+			"blogUrl": "https://www.developerway.com/",
+			"selectors": {
+				"article": "main article",
+				"link": "h3 a",
+				"title": "h3 a",
+				"datetime": "p:last-child"
+			}
 		}
 	]
 }

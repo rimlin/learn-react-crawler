@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 
-import { SiteArticle, SiteArticles } from '~/types/Crawler';
+import { ParsedArticle, SiteInfo } from '~/types/Crawler';
 import { ReadStatus } from '~/types/ReadStatus';
 
 interface Props {
-  site: SiteArticles | undefined;
-  data: SiteArticle[];
+  site: SiteInfo | undefined;
+  data: ParsedArticle[];
   toggleRead: (href: string) => void;
   markAllAsReaded: () => void;
   readStatus: ReadStatus;
@@ -22,9 +22,21 @@ export const Feed = ({
     <div className="feed">
       <div className="panel">
         {site ? (
-          <a href={site.blogUrl} target="_blank">
-            {site.blogUrl}
-          </a>
+          <>
+            <a href={site.blogUrl} target="_blank">
+              {site.blogUrl}
+            </a>
+            <div
+              className={classNames('site-status', {
+                success: site.data.success,
+                error: site.data.success === false
+              })}>
+              {site.data.success ? 'OK' : 'Error'}
+            </div>
+            {site.data.success === false ? (
+              <div className="site-status-error">{site.data.error}</div>
+            ) : null}
+          </>
         ) : null}
         <button onClick={() => markAllAsReaded()} type="button">
           Mark all as readed

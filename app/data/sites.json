@@ -190,6 +190,16 @@
 				"title": "h3 a",
 				"datetime": "p:last-child"
 			}
+		},
+		{
+			"name": "Tania Rascia",
+			"siteUrl": "https://www.taniarascia.com/",
+			"blogUrl": "https://www.taniarascia.com/blog/",
+			"selectors": {
+				"article": "a.post",
+				"title": "h3",
+				"datetime": "time"
+			}
 		}
 	]
 }

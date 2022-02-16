@@ -16,6 +16,8 @@ const parseSite = async (siteInfo: SiteMeta): Promise<ParsedSite> => {
   const parseArticles = (html: string) => {
     const $ = cheerio.load(html);
 
+    const containedArticles = new Set();
+
     return $(siteInfo.selectors.article)
       .map((index: number, elem: cheerio.Node) => {
         let date;
@@ -41,7 +43,16 @@ const parseSite = async (siteInfo: SiteMeta): Promise<ParsedSite> => {
           }
         };
       })
-      .get();
+      .get()
+      .filter(item => {
+        if (containedArticles.has(item.articleUrl)) {
+          return false;
+        } else {
+          containedArticles.add(item.articleUrl);
+
+          return true;
+        }
+      });
   };
 
   try {

@@ -200,6 +200,16 @@
 				"title": "h3",
 				"datetime": "time"
 			}
+		},
+		{
+			"name": "InDepthDev",
+			"siteUrl": "https://indepth.dev/react",
+			"blogUrl": "https://indepth.dev/react",
+			"selectors": {
+				"article": "#content > div:first-child > div:first-child > div:first-child article",
+				"link": "a[title]",
+				"title": "a[title]"
+			}
 		}
 	]
 }

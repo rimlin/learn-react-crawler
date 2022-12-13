@@ -210,6 +210,81 @@
 				"link": "a[title]",
 				"title": "a[title]"
 			}
+		},
+		{
+			"name": "Alex Sidorenko",
+			"siteUrl": "https://alexsidorenko.com/",
+			"blogUrl": "https://alexsidorenko.com/",
+			"selectors": {
+				"article": "main article",
+				"link": "h3 > a",
+				"title": "h3 > a"
+			}
+		},
+		{
+			"name": "JSer blog",
+			"siteUrl": "https://jser.dev/",
+			"blogUrl": "https://jser.dev/",
+			"selectors": {
+				"article": ".post-list li",
+				"link": "h3 > a",
+				"title": "h3 > a",
+				"datetime": "span.post-meta"
+			}
+		},
+		{
+			"name": "TKDodo",
+			"siteUrl": "https://tkdodo.eu/",
+			"blogUrl": "https://tkdodo.eu/blog/all",
+			"selectors": {
+				"article": "main > section > div div",
+				"link": "a:eq(1)",
+				"title": "a:eq(1)",
+				"datetime": "time"
+			}
+		},
+		{
+			"name": "Chak Shun Yu",
+			"siteUrl": "https://www.chakshunyu.com/",
+			"blogUrl": "https://www.chakshunyu.com/blog/",
+			"selectors": {
+				"article": "main > section article",
+				"link": "header h3 a",
+				"title": "header h3 a",
+				"datetime": "header small:first-child"
+			}
+		},
+		{
+			"name": "Epic React",
+			"siteUrl": "https://epicreact.dev/",
+			"blogUrl": "https://epicreact.dev/articles",
+			"selectors": {
+				"article": "main > ul article",
+				"link": "a",
+				"title": "h2",
+				"datetime": "footer span"
+			}
+		},
+		{
+			"name": "Alex Kondov",
+			"siteUrl": "https://alexkondov.com/",
+			"blogUrl": "https://alexkondov.com/articles",
+			"selectors": {
+				"article": "a:has(.article-list-item)",
+				"title": "h3",
+				"datetime": "small"
+			}
+		},
+		{
+			"name": "NaN",
+			"siteUrl": "https://www.nan.fyi/",
+			"blogUrl": "https://www.nan.fyi/",
+			"selectors": {
+				"article": "main > div > ul li",
+				"link": "h1 a",
+				"title": "h1 a",
+				"datetime": "p:first-child"
+			}
 		}
 	]
 }

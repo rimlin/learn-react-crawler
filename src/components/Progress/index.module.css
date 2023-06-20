@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+  width: 100%;
+  background-color: hsl(50deg 30% 60%);
+  padding: 8px;
+}
+
+.value {
+  position: absolute;
+  background-color: hsl(90deg 70% 55%);
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: relative;
+  color: #111;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+}

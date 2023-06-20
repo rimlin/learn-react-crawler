@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-import sitesJson from './_sites.json' assert { type: 'json' };
+import sitesJson from '../data/sites.json' assert { type: 'json' };
 
 const sites = sitesJson.sites;
 

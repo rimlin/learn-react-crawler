@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import * as cheerio from 'cheerio';
 
-import sitesJson from './_sites.json' assert { type: 'json' };
+import sitesJson from '../data/sites.json' assert { type: 'json' };
 import { ArticleInfo, SiteInfo, SiteMeta } from '../src/types/Crawler';
 
 const sites = sitesJson.sites;

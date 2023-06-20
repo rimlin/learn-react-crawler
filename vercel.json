@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/count.ts": {
+      "includeFiles": "data/**"
+    },
+    "api/info.ts": {
+      "includeFiles": "data/**"
+    }
+  }
+}

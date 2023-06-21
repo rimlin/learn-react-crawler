@@ -1,9 +1,9 @@
 {
   "functions": {
-    "api/count.ts": {
+    "api/count.js": {
       "includeFiles": "data/**"
     },
-    "api/info.ts": {
+    "api/info.js": {
       "includeFiles": "data/**"
     }
   }
